@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aço Peças Oliveira | Usinagem de Precisão</title>
+  <meta name="description" content="APO - Especialistas em usinagem de precisão de metais ferrosos, não-ferrosos e polímeros desde 2011. São Leopoldo/RS.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <img src="logo.png" alt="Aço Peças Oliveira" class="nav-logo-img">
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hero" class="nav-link">Início</a></li>
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#segmentos" class="nav-link">Segmentos</a></li>
+        <li><a href="#capacidade" class="nav-link">Capacidade</a></li>
+        <li><a href="#clientes" class="nav-link">Clientes</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://wa.me/555135913331" class="btn-whatsapp" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Fundada em 2011 · São Leopoldo/RS
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">Usinagem de</span>
+        <span class="title-line accent" id="typedText"></span>
+      </h1>
+      <p class="hero-subtitle">
+        Especialistas em usinagem de precisão de metais ferrosos, não-ferrosos e polímeros.
+        2.300m² de capacidade produtiva a serviço da sua indústria.
+      </p>
+      <div class="hero-cta">
+        <a href="#contato" class="btn-primary">
+          Solicitar Orçamento
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#sobre" class="btn-secondary">Conhecer a Empresa</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="stat-number">14<span class="stat-plus">+</span></span>
+          <span class="stat-label">Anos de Experiência</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="stat-number">2.300<span class="stat-unit">m²</span></span>
+          <span class="stat-label">Área Produtiva</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="stat-number">5</span>
+          <span class="stat-label">Setores Atendidos</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Role para baixo</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Sobre Nós</span>
+        <h2 class="section-title">Excelência em cada <span class="accent">detalhe</span></h2>
+        <p class="section-desc">Desde 2011, a APO entrega precisão e qualidade para os principais players da indústria metal-mecânica brasileira.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-content reveal">
+          <div class="about-text">
+            <p>A <strong>APO</strong> nasceu com o propósito de oferecer soluções completas em usinagem de precisão, atendendo com excelência as mais rigorosas especificações técnicas do mercado metal-mecânico.</p>
+            <p>Operando em uma moderna instalação de <strong>2.300m² de área coberta</strong> em São Leopoldo/RS, contamos com tecnologia CNC de última geração e uma equipe altamente qualificada.</p>
+            <p>Nossa filosofia é simples: <strong>qualidade plena e satisfação total do cliente</strong> em cada peça produzida.</p>
+          </div>
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+              <h4>Qualidade</h4>
+              <p>ISO certificada com controle rigoroso em cada etapa</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+              <h4>Precisão</h4>
+              <p>Tolerâncias mínimas com tecnologia CNC avançada</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+              <h4>Compromisso</h4>
+              <p>Parcerias duradouras com os maiores nomes da indústria</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+              <h4>Agilidade</h4>
+              <p>Prazos cumpridos sem abrir mão da qualidade</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-stats reveal">
+          <div class="stats-card">
+            <div class="stat-item"><div class="stat-num">2011</div><div class="stat-desc">Ano de Fundação</div></div>
+            <div class="stat-item highlight"><div class="stat-num counter" data-target="2300">0</div><div class="stat-unit-small">m²</div><div class="stat-desc">Área Coberta</div></div>
+            <div class="stat-item"><div class="stat-num counter" data-target="14">0</div><div class="stat-unit-small">+</div><div class="stat-desc">Anos no Mercado</div></div>
+            <div class="stat-item"><div class="stat-num counter" data-target="5">0</div><div class="stat-unit-small"> setores</div><div class="stat-desc">Segmentos Atendidos</div></div>
+            <div class="iso-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <div><span class="iso-title">ISO Certificada</span><span class="iso-sub">Qualidade assegurada</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Segments -->
+  <section id="segmentos" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Setores de Atuação</span>
+        <h2 class="section-title">Segmentos que <span class="accent">atendemos</span></h2>
+        <p class="section-desc">Nossa expertise abrange os mais exigentes setores da indústria, com soluções customizadas para cada aplicação.</p>
+      </div>
+      <div class="segments-grid">
+        <div class="segment-card reveal" data-delay="0">
+          <div class="segment-number">01</div>
+          <div class="segment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="40" height="40"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+          <h3>Ferramentas e Instrumentos de Medição</h3>
+          <p>Peças de alta precisão para instrumentos de medição e ferramentas industriais de alta performance.</p>
+          <div class="segment-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+        </div>
+        <div class="segment-card reveal" data-delay="100">
+          <div class="segment-number">02</div>
+          <div class="segment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="40" height="40"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zM2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+          <h3>Componentes Hidráulicos</h3>
+          <p>Usinagem especializada de componentes para sistemas hidráulicos com tolerâncias críticas e acabamentos perfeitos.</p>
+          <div class="segment-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+        </div>
+        <div class="segment-card reveal" data-delay="200">
+          <div class="segment-number">03</div>
+          <div class="segment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="40" height="40"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Armas e Munições</h3>
+          <p>Componentes de alta precisão para a indústria de defesa, seguindo rigorosos padrões de qualidade e conformidade.</p>
+          <div class="segment-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+        </div>
+        <div class="segment-card reveal" data-delay="300">
+          <div class="segment-number">04</div>
+          <div class="segment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="40" height="40"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h3>Equipamentos Agrícolas</h3>
+          <p>Peças e componentes para maquinário agrícola, com resistência e durabilidade para os ambientes mais adversos.</p>
+          <div class="segment-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+        </div>
+        <div class="segment-card reveal" data-delay="400">
+          <div class="segment-number">05</div>
+          <div class="segment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="40" height="40"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg></div>
+          <h3>Peças Automotivas</h3>
+          <p>Componentes automotivos com precisão dimensional e acabamentos superficiais que atendem às mais rigorosas especificações OEM.</p>
+          <div class="segment-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manufacturing -->
+  <section id="capacidade" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Parque de Máquinas</span>
+        <h2 class="section-title">Tecnologia de <span class="accent">ponta</span></h2>
+        <p class="section-desc">Investimos continuamente em equipamentos de última geração para garantir produtividade, precisão e competitividade.</p>
+      </div>
+      <div class="equipment-grid">
+        <div class="equipment-card featured reveal">
+          <div class="equipment-badge">Nova Aquisição</div>
+          <div class="equipment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <h3>CITIZEN A20</h3>
+          <p>Torno CNC de última geração com alta produtividade para peças de pequeno porte com tolerâncias mínimas.</p>
+          <div class="equipment-specs"><span class="spec-tag">CNC</span><span class="spec-tag">Alta Precisão</span><span class="spec-tag">Produção em Série</span></div>
+        </div>
+        <div class="equipment-card featured reveal">
+          <div class="equipment-badge">Nova Aquisição</div>
+          <div class="equipment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h3>HANWHA XE35</h3>
+          <p>Centro de torneamento de alta performance com capacidade para usinagem de peças maiores com máxima precisão.</p>
+          <div class="equipment-specs"><span class="spec-tag">Multi-eixo</span><span class="spec-tag">Alta Capacidade</span><span class="spec-tag">Automação</span></div>
+        </div>
+        <div class="equipment-card reveal">
+          <div class="equipment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+          <h3>Tornos CNC</h3>
+          <p>Linha completa de tornos de controle numérico para usinagem de peças rotacionais de precisão.</p>
+          <div class="equipment-specs"><span class="spec-tag">Ferrosos</span><span class="spec-tag">Não-Ferrosos</span></div>
+        </div>
+        <div class="equipment-card reveal">
+          <div class="equipment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg></div>
+          <h3>Centros de Usinagem</h3>
+          <p>Centros de usinagem vertical e horizontal para peças prismáticas com geometrias complexas.</p>
+          <div class="equipment-specs"><span class="spec-tag">Fresamento</span><span class="spec-tag">Furação</span></div>
+        </div>
+        <div class="equipment-card reveal">
+          <div class="equipment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg></div>
+          <h3>Retificadoras</h3>
+          <p>Retificação cilíndrica e plana para acabamentos superficiais e tolerâncias dimensionais mínimas.</p>
+          <div class="equipment-specs"><span class="spec-tag">Cilíndrica</span><span class="spec-tag">Plana</span></div>
+        </div>
+        <div class="equipment-card reveal">
+          <div class="equipment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Metrologia</h3>
+          <p>Laboratório equipado com instrumentos de precisão para garantia da qualidade dimensional em 100% das peças.</p>
+          <div class="equipment-specs"><span class="spec-tag">CMM</span><span class="spec-tag">Controle 100%</span></div>
+        </div>
+      </div>
+      <div class="materials-section reveal">
+        <h3>Materiais Usinados</h3>
+        <div class="materials-grid">
+          <div class="material-tag">Aço Carbono</div>
+          <div class="material-tag">Aço Inoxidável</div>
+          <div class="material-tag">Alumínio</div>
+          <div class="material-tag">Latão</div>
+          <div class="material-tag">Bronze</div>
+          <div class="material-tag">Cobre</div>
+          <div class="material-tag">Polímeros</div>
+          <div class="material-tag">Titânio</div>
+          <div class="material-tag">Ligas Especiais</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients -->
+  <section id="clientes" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Nossos Clientes</span>
+        <h2 class="section-title">Confiança de grandes <span class="accent">marcas</span></h2>
+        <p class="section-desc">Somos parceiros de confiança das maiores empresas da indústria nacional, entregando qualidade que faz a diferença.</p>
+      </div>
+      <div class="clients-marquee-wrapper reveal">
+        <div class="marquee-gradient left"></div>
+        <div class="clients-marquee">
+          <div class="marquee-track">
+            <div class="client-logo">STARRETT</div>
+            <div class="client-logo">REXNORD</div>
+            <div class="client-logo">CBC</div>
+            <div class="client-logo">TAURUS</div>
+            <div class="client-logo">STARRETT</div>
+            <div class="client-logo">REXNORD</div>
+            <div class="client-logo">CBC</div>
+            <div class="client-logo">TAURUS</div>
+            <div class="client-logo">STARRETT</div>
+            <div class="client-logo">REXNORD</div>
+            <div class="client-logo">CBC</div>
+            <div class="client-logo">TAURUS</div>
+          </div>
+        </div>
+        <div class="marquee-gradient right"></div>
+      </div>
+      <div class="testimonial-grid reveal">
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <p>A APO tem sido um parceiro essencial para nossa linha de produção. A precisão das peças e o cumprimento de prazos são exemplares.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">S</div>
+            <div><span class="author-name">Starrett</span><span class="author-role">Instrumentos de Medição</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <p>Qualidade consistente e total confiabilidade nos fornecimentos. A parceria com a APO agrega valor real ao nosso processo produtivo.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">T</div>
+            <div><span class="author-name">Taurus</span><span class="author-role">Indústria de Defesa</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <p>Fornecedor de confiança há anos. A APO entende nossas necessidades técnicas e entrega com a qualidade que precisamos.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">R</div>
+            <div><span class="author-name">Rexnord</span><span class="author-role">Componentes Industriais</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contato" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Fale Conosco</span>
+        <h2 class="section-title">Vamos trabalhar <span class="accent">juntos</span></h2>
+        <p class="section-desc">Entre em contato e solicite um orçamento personalizado para a sua necessidade.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-card">
+            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><h4>Endereço</h4><p>Av. São Borja, 3001<br>Fazenda São Borja<br>São Leopoldo/RS</p></div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.13 3a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.91a16 16 0 006.16 6.16l1.27-1.37a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div><h4>Telefone / WhatsApp</h4><p>+55 (51) 3591-3331</p></div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><h4>E-mail</h4><p>comercial@acopecasoliveira.com.br</p></div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><h4>Horário de Atendimento</h4><p>Segunda à Sexta<br>07:30 – 17:00</p></div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="https://wa.me/555135913331" class="social-link whatsapp" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper reveal">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group"><label for="name">Nome *</label><input type="text" id="name" name="name" placeholder="Seu nome completo" required></div>
+              <div class="form-group"><label for="company">Empresa</label><input type="text" id="company" name="company" placeholder="Nome da empresa"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="email">E-mail *</label><input type="email" id="email" name="email" placeholder="seu@email.com" required></div>
+              <div class="form-group"><label for="phone">Telefone</label><input type="tel" id="phone" name="phone" placeholder="(51) 9 0000-0000"></div>
+            </div>
+            <div class="form-group">
+              <label for="segment">Segmento</label>
+              <select id="segment" name="segment">
+                <option value="">Selecione seu segmento</option>
+                <option value="ferramentas">Ferramentas e Instrumentos</option>
+                <option value="hidraulico">Componentes Hidráulicos</option>
+                <option value="armas">Armas e Munições</option>
+                <option value="agricola">Equipamentos Agrícolas</option>
+                <option value="automotivo">Peças Automotivas</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div class="form-group"><label for="message">Mensagem *</label><textarea id="message" name="message" rows="5" placeholder="Descreva sua necessidade, materiais, quantidades e prazo desejado..." required></textarea></div>
+            <button type="submit" class="btn-submit">
+              Enviar Solicitação
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo-link">
+            <img src="logo.png" alt="Aço Peças Oliveira" class="footer-logo-img">
+          </a>
+          <p class="footer-desc">Especialistas em usinagem de precisão desde 2011. Qualidade e comprometimento em cada peça produzida.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#segmentos">Segmentos</a></li>
+            <li><a href="#capacidade">Capacidade</a></li>
+            <li><a href="#clientes">Clientes</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Segmentos</h4>
+          <ul>
+            <li><a href="#segmentos">Ferramentas e Medição</a></li>
+            <li><a href="#segmentos">Componentes Hidráulicos</a></li>
+            <li><a href="#segmentos">Armas e Munições</a></li>
+            <li><a href="#segmentos">Equipamentos Agrícolas</a></li>
+            <li><a href="#segmentos">Peças Automotivas</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contato</h4>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Av. São Borja, 3001 — São Leopoldo/RS</span></div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.13 3a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.91a16 16 0 006.16 6.16l1.27-1.37a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span>+55 (51) 3591-3331</span></div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>comercial@acopecasoliveira.com.br</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Aço Peças Oliveira. Todos os direitos reservados.</p>
+        <p>Desenvolvido com excelência</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
