@@ -94,6 +94,20 @@
         <p class="section-desc">Desde 2011, a APO entrega precisão e qualidade para os principais players da indústria metal-mecânica brasileira.</p>
       </div>
       <div class="about-grid">
+
+        <!-- Foto da empresa -->
+        <div class="about-photo reveal">
+          <div class="about-photo-wrapper">
+            <img src="fachada.jpg" alt="Fachada Aço Peças Oliveira — Av. São Borja 3001, São Leopoldo/RS" class="about-img">
+            <div class="about-photo-overlay"></div>
+            <div class="about-photo-badge">
+              <span class="apb-year">2011</span>
+              <span class="apb-label">Fundada em<br>São Leopoldo/RS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conteúdo -->
         <div class="about-content reveal">
           <div class="about-text">
             <p>A <strong>APO</strong> nasceu com o propósito de oferecer soluções completas em usinagem de precisão, atendendo com excelência as mais rigorosas especificações técnicas do mercado metal-mecânico.</p>
@@ -123,16 +137,84 @@
             </div>
           </div>
         </div>
-        <div class="about-stats reveal">
-          <div class="stats-card">
-            <div class="stat-item"><div class="stat-num">2011</div><div class="stat-desc">Ano de Fundação</div></div>
-            <div class="stat-item highlight"><div class="stat-num counter" data-target="2300">0</div><div class="stat-unit-small">m²</div><div class="stat-desc">Área Coberta</div></div>
-            <div class="stat-item"><div class="stat-num counter" data-target="14">0</div><div class="stat-unit-small">+</div><div class="stat-desc">Anos no Mercado</div></div>
-            <div class="stat-item"><div class="stat-num counter" data-target="5">0</div><div class="stat-unit-small"> setores</div><div class="stat-desc">Segmentos Atendidos</div></div>
-            <div class="iso-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              <div><span class="iso-title">ISO Certificada</span><span class="iso-sub">Qualidade assegurada</span></div>
-            </div>
+      </div>
+
+      <!-- Estatísticas em linha -->
+      <div class="about-stats-row reveal">
+        <div class="stat-box">
+          <div class="stat-box-num">2011</div>
+          <div class="stat-box-desc">Ano de Fundação</div>
+        </div>
+        <div class="stat-box-divider"></div>
+        <div class="stat-box accent">
+          <div class="stat-box-num"><span class="counter" data-target="2300">0</span><span class="stat-box-unit">m²</span></div>
+          <div class="stat-box-desc">Área Coberta</div>
+        </div>
+        <div class="stat-box-divider"></div>
+        <div class="stat-box">
+          <div class="stat-box-num"><span class="counter" data-target="14">0</span><span class="stat-box-unit">+</span></div>
+          <div class="stat-box-desc">Anos no Mercado</div>
+        </div>
+        <div class="stat-box-divider"></div>
+        <div class="stat-box">
+          <div class="stat-box-num"><span class="counter" data-target="5">0</span></div>
+          <div class="stat-box-desc">Segmentos Atendidos</div>
+        </div>
+        <div class="stat-box-divider"></div>
+        <div class="stat-box iso-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div>
+            <div class="stat-box-num" style="font-size:1.1rem;">ISO</div>
+            <div class="stat-box-desc">Certificada</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section id="video-apo" class="section section-video">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">A APO em Ação</span>
+        <h2 class="section-title">Conheça nossa <span class="accent">estrutura</span></h2>
+        <p class="section-desc">Veja de perto nossa instalação e como transformamos matéria-prima em peças de alta precisão para os maiores nomes da indústria.</p>
+      </div>
+
+      <div class="video-scene reveal">
+        <!-- Glow rings decorativos -->
+        <div class="video-glow-ring ring-1"></div>
+        <div class="video-glow-ring ring-2"></div>
+
+        <!-- Thumbnail com play button — carrega iframe ao clicar -->
+        <div class="video-frame">
+          <video
+            class="video-player"
+            controls
+            preload="metadata"
+            poster="https://img.youtube.com/vi/9rKwXnNvxAs/maxresdefault.jpg"
+          >
+            <source src="video.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!-- Chips -->
+        <div class="video-chips">
+          <div class="video-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            ISO Certificada
+          </div>
+          <div class="video-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Tecnologia CNC
+          </div>
+          <div class="video-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            14+ Anos de Experiência
+          </div>
+          <div class="video-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            São Leopoldo/RS
           </div>
         </div>
       </div>
@@ -235,6 +317,37 @@
           <div class="equipment-specs"><span class="spec-tag">CMM</span><span class="spec-tag">Controle 100%</span></div>
         </div>
       </div>
+
+      <!-- Foto MES — gestão de produção -->
+      <div class="mes-highlight reveal">
+        <div class="mes-photo-wrap">
+          <img src="mes.jpg" alt="Sistema MES Syneco — controle de produção em tempo real" class="mes-photo">
+          <div class="mes-photo-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Sistema MES · Syneco
+          </div>
+        </div>
+        <div class="mes-content">
+          <span class="section-tag" style="margin-bottom:16px;display:inline-block;">Indústria 4.0</span>
+          <h3>Gestão de produção <span class="accent">em tempo real</span></h3>
+          <p>Utilizamos o sistema MES (Manufacturing Execution System) da Syneco para monitorar cada máquina em tempo real — disponibilidade, qualidade, eficiência e OEE — garantindo rastreabilidade total e produção otimizada.</p>
+          <div class="mes-kpis">
+            <div class="mes-kpi">
+              <span class="mes-kpi-value">OEE</span>
+              <span class="mes-kpi-label">Monitorado</span>
+            </div>
+            <div class="mes-kpi">
+              <span class="mes-kpi-value">100%</span>
+              <span class="mes-kpi-label">Rastreabilidade</span>
+            </div>
+            <div class="mes-kpi">
+              <span class="mes-kpi-value">Real-time</span>
+              <span class="mes-kpi-label">Dados ao vivo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="materials-section reveal">
         <h3>Materiais Usinados</h3>
         <div class="materials-grid">
