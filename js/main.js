@@ -207,9 +207,16 @@ const revealObserver = new IntersectionObserver((entries) => {
       revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// Fallback: garante que todos ficam visíveis após 1.5s independente do scroll
+setTimeout(() => {
+  document.querySelectorAll('.reveal:not(.revealed)').forEach(el => {
+    el.classList.add('revealed');
+  });
+}, 1500);
 
 /* ======================
    COUNTER ANIMATION
@@ -312,6 +319,7 @@ heroSection.addEventListener('mouseleave', () => {
     setTimeout(() => { heroContent.style.transition = 'transform 0.1s ease'; }, 600);
   }
 });
+
 
 /* ======================
    SEGMENT CARDS TILT
