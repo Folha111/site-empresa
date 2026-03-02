@@ -1213,6 +1213,7 @@ img { max-width: 100%; display: block; }
 }
 .btn-submit.loading { opacity: 0.8; cursor: not-allowed; }
 .btn-submit.success { background: var(--green); color: #0a1f0a; }
+.btn-submit.error { background: #c0392b; color: #fff; }
 
 /* ======================
    FOOTER
