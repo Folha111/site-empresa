@@ -275,7 +275,7 @@ const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   const submitBtn = contactForm.querySelector('.btn-submit');
 
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const originalHTML = submitBtn.innerHTML;
 
@@ -288,7 +288,26 @@ if (contactForm) {
     `;
     submitBtn.disabled = true;
 
-    setTimeout(() => {
+    const formData = {
+      name: contactForm.name.value.trim(),
+      company: contactForm.company.value.trim(),
+      email: contactForm.email.value.trim(),
+      phone: contactForm.phone.value.trim(),
+      segment: contactForm.segment.value,
+      message: contactForm.message.value.trim(),
+    };
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) throw new Error(data.error ?? 'Erro desconhecido');
+
       submitBtn.classList.remove('loading');
       submitBtn.classList.add('success');
       submitBtn.innerHTML = `
@@ -304,7 +323,22 @@ if (contactForm) {
         submitBtn.classList.remove('success');
         submitBtn.innerHTML = originalHTML;
       }, 3500);
-    }, 1600);
+    } catch (err) {
+      submitBtn.classList.remove('loading');
+      submitBtn.classList.add('error');
+      submitBtn.innerHTML = `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+          <path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+        </svg>
+        Erro ao enviar. Tente novamente.
+      `;
+      submitBtn.disabled = false;
+
+      setTimeout(() => {
+        submitBtn.classList.remove('error');
+        submitBtn.innerHTML = originalHTML;
+      }, 4000);
+    }
   });
 }
 
