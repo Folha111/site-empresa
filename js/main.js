@@ -487,6 +487,30 @@ const typedWords = {
   en: ['Precision', 'Excellence', 'Quality', 'Trust', 'Innovation'],
 };
 
+/* ======================
+   PAGE TRANSITIONS
+====================== */
+document.addEventListener('click', function (e) {
+  const link = e.target.closest('a[href]');
+  if (!link) return;
+
+  const href = link.getAttribute('href');
+  // Ignora links externos, âncoras, download e target blank
+  if (
+    !href ||
+    href.startsWith('#') ||
+    href.startsWith('http') ||
+    href.startsWith('mailto') ||
+    href.startsWith('tel') ||
+    link.hasAttribute('download') ||
+    link.target === '_blank'
+  ) return;
+
+  e.preventDefault();
+  document.body.classList.add('page-leaving');
+  setTimeout(() => { window.location.href = href; }, 120);
+});
+
 let currentLang = localStorage.getItem('lang') || 'pt';
 
 function applyLanguage(lang) {
