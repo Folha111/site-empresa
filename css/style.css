@@ -192,7 +192,7 @@ img { max-width: 100%; display: block; }
 }
 
 .nav-logo-img {
-  height: 44px;
+  height: 80px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -1280,7 +1280,7 @@ img { max-width: 100%; display: block; }
 }
 
 .footer-logo-link { display: inline-block; margin-bottom: 20px; }
-.footer-logo-img { height: 40px; width: auto; object-fit: contain; opacity: 0.9; transition: opacity var(--transition); }
+.footer-logo-img { height: 72px; width: auto; object-fit: contain; opacity: 0.9; transition: opacity var(--transition); }
 .footer-logo-img:hover { opacity: 1; }
 .footer-desc { color: var(--text-muted); font-size: 0.88rem; line-height: 1.7; max-width: 280px; }
 
