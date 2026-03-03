@@ -117,7 +117,7 @@ if (canvas) {
 ====================== */
 const typedEl = document.getElementById('typedText');
 if (typedEl) {
-  const words = ['Precisão', 'Excelência', 'Qualidade', 'Confiança', 'Inovação'];
+  const words = (localStorage.getItem('lang') === 'en' ? ['Precision', 'Excellence', 'Quality', 'Trust', 'Innovation'] : ['Precisão', 'Excelência', 'Qualidade', 'Confiança', 'Inovação']);
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
@@ -379,3 +379,140 @@ document.querySelectorAll('.segment-card').forEach(card => {
     card.style.transition = 'all 0.4s ease';
   });
 });
+
+/* ======================
+   LANGUAGE SWITCHER
+====================== */
+const i18n = {
+  pt: {
+    'nav.home': 'Início', 'nav.about': 'Sobre', 'nav.segments': 'Segmentos',
+    'nav.capacity': 'Capacidade', 'nav.quality': 'Qualidade', 'nav.clients': 'Clientes', 'nav.contact': 'Contato',
+
+    'hero.badge': 'Fundada em 2011 · São Leopoldo/RS',
+    'hero.title1': 'Usinagem de', 'hero.subtitle': 'Especialistas em usinagem de precisão de metais ferrosos, não-ferrosos e polímeros. 2.300m² de capacidade produtiva a serviço da sua indústria.',
+    'hero.cta1': 'Solicitar Orçamento', 'hero.cta2': 'Conhecer a Empresa',
+    'hero.stat1': 'Anos de Experiência', 'hero.stat2': 'Área Produtiva', 'hero.stat3': 'Setores Atendidos',
+
+    'about.tag': 'Sobre Nós', 'about.title': 'Excelência em cada', 'about.title.accent': 'detalhe',
+    'about.desc': 'Desde 2011, a APO entrega precisão e qualidade para os principais players da indústria metal-mecânica brasileira.',
+    'about.p1': 'A <strong>APO</strong> nasceu com o propósito de oferecer soluções completas em usinagem de precisão, atendendo com excelência as mais rigorosas especificações técnicas do mercado metal-mecânico.',
+    'about.p2': 'Operando em uma moderna instalação de <strong>2.300m² de área coberta</strong> em São Leopoldo/RS, contamos com tecnologia CNC de última geração e uma equipe altamente qualificada.',
+    'about.p3': 'Nossa filosofia é simples: <strong>qualidade plena e satisfação total do cliente</strong> em cada peça produzida.',
+    'about.p4': 'Operamos com cultura de <strong>Lean Manufacturing</strong> — eliminando desperdícios e maximizando eficiência em cada etapa do processo produtivo, do setup à entrega.',
+    'about.v1.title': 'Qualidade', 'about.v1.desc': 'ISO certificada com controle rigoroso em cada etapa',
+    'about.v2.title': 'Precisão', 'about.v2.desc': 'Tolerâncias mínimas com tecnologia CNC avançada',
+    'about.v3.title': 'Compromisso', 'about.v3.desc': 'Parcerias duradouras com os maiores nomes da indústria',
+    'about.v4.title': 'Agilidade', 'about.v4.desc': 'Prazos cumpridos sem abrir mão da qualidade',
+    'about.s1': 'Ano de Fundação', 'about.s2': 'Área Coberta', 'about.s3': 'Anos no Mercado', 'about.s4': 'Segmentos Atendidos', 'about.s5': 'Certificada',
+
+    'video.tag': 'A APO em Ação', 'video.title': 'Conheça nossa', 'video.title.accent': 'estrutura',
+    'video.desc': 'Veja de perto nossa instalação e como transformamos matéria-prima em peças de alta precisão para os maiores nomes da indústria.',
+
+    'process.tag': 'Como Trabalhamos', 'process.title': 'Nosso', 'process.title.accent': 'processo',
+    'process.desc': 'Da especificação técnica à entrega, cada etapa é controlada com rigor para garantir peças que superam as expectativas do cliente.',
+    'process.s1.title': 'Análise Técnica', 'process.s1.desc': 'Recebemos o desenho técnico ou modelo 3D e revisamos todas as especificações, tolerâncias e materiais requeridos.',
+    'process.s2.title': 'Programação CNC', 'process.s2.desc': 'Programadores especialistas desenvolvem o código CNC otimizado para máxima precisão e eficiência via softwares CAM.',
+    'process.s3.title': 'Usinagem CNC', 'process.s3.desc': 'Produção em nosso parque de máquinas com monitoramento em tempo real via MES Syneco para máxima eficiência operacional.',
+    'process.s4.title': 'Controle de Qualidade', 'process.s4.desc': 'Inspeção dimensional 100% em laboratório de metrologia com CMM e instrumentos calibrados. Nenhuma peça sai sem aprovação.',
+    'process.s5.title': 'Expedição', 'process.s5.desc': 'Embalagem adequada e documentação técnica completa, com rastreabilidade total do lote. Entrega no prazo combinado.',
+
+    'seg.tag': 'Setores de Atuação', 'seg.title': 'Segmentos que', 'seg.title.accent': 'atendemos',
+    'seg.desc': 'Nossa expertise abrange os mais exigentes setores da indústria, com soluções customizadas para cada aplicação.',
+
+    'cap.tag': 'Parque de Máquinas', 'cap.title': 'Tecnologia de', 'cap.title.accent': 'ponta',
+    'cap.desc': 'Investimos continuamente em equipamentos de última geração para garantir produtividade, precisão e competitividade.',
+
+    'clients.tag': 'Nossos Clientes', 'clients.title': 'Confiança de grandes', 'clients.title.accent': 'marcas',
+    'clients.desc': 'Somos parceiros de confiança das maiores empresas da indústria nacional, entregando qualidade que faz a diferença.',
+
+    'contact.tag': 'Fale Conosco', 'contact.title': 'Vamos trabalhar', 'contact.title.accent': 'juntos',
+    'contact.desc': 'Entre em contato e solicite um orçamento personalizado para a sua necessidade.',
+    'contact.address.title': 'Endereço', 'contact.address.value': 'Av. São Borja, 3001<br>Fazenda São Borja<br>São Leopoldo/RS', 'contact.address.hint': 'Ver no Google Maps →',
+
+    'cert.title': 'Empresa Certificada ISO', 'cert.download': 'Baixar Certificado ISO (PDF)',
+    'cert.desc': 'A APO opera com sistema de gestão da qualidade certificado, assegurando processos padronizados, rastreabilidade de lotes, controle dimensional sistemático e melhoria contínua em todos os aspectos da produção. Nossa certificação é auditada regularmente e reflete o comprometimento da liderança e de toda a equipe com a excelência.',
+  },
+  en: {
+    'nav.home': 'Home', 'nav.about': 'About', 'nav.segments': 'Segments',
+    'nav.capacity': 'Capacity', 'nav.quality': 'Quality', 'nav.clients': 'Clients', 'nav.contact': 'Contact',
+
+    'hero.badge': 'Founded in 2011 · São Leopoldo/RS',
+    'hero.title1': 'Machining with', 'hero.subtitle': 'Specialists in precision machining of ferrous metals, non-ferrous metals, and polymers. 2,300m² of productive capacity at the service of your industry.',
+    'hero.cta1': 'Request a Quote', 'hero.cta2': 'Learn About Us',
+    'hero.stat1': 'Years of Experience', 'hero.stat2': 'Production Area', 'hero.stat3': 'Sectors Served',
+
+    'about.tag': 'About Us', 'about.title': 'Excellence in every', 'about.title.accent': 'detail',
+    'about.desc': 'Since 2011, APO has delivered precision and quality to the leading players in the Brazilian metal-mechanical industry.',
+    'about.p1': '<strong>APO</strong> was founded with the purpose of offering complete solutions in precision machining, meeting with excellence the most rigorous technical specifications of the metal-mechanical market.',
+    'about.p2': 'Operating from a modern <strong>2,300m² covered facility</strong> in São Leopoldo/RS, we rely on state-of-the-art CNC technology and a highly qualified team.',
+    'about.p3': 'Our philosophy is simple: <strong>full quality and total customer satisfaction</strong> in every part produced.',
+    'about.p4': 'We operate with a <strong>Lean Manufacturing</strong> culture — eliminating waste and maximizing efficiency at every stage of the production process, from setup to delivery.',
+    'about.v1.title': 'Quality', 'about.v1.desc': 'ISO certified with rigorous control at every step',
+    'about.v2.title': 'Precision', 'about.v2.desc': 'Minimal tolerances with advanced CNC technology',
+    'about.v3.title': 'Commitment', 'about.v3.desc': 'Long-term partnerships with the biggest names in industry',
+    'about.v4.title': 'Agility', 'about.v4.desc': 'Deadlines met without compromising quality',
+    'about.s1': 'Year Founded', 'about.s2': 'Covered Area', 'about.s3': 'Years in Business', 'about.s4': 'Segments Served', 'about.s5': 'Certified',
+
+    'video.tag': 'APO in Action', 'video.title': 'Discover our', 'video.title.accent': 'facility',
+    'video.desc': 'Take a close look at our facility and how we transform raw material into high-precision parts for industry leaders.',
+
+    'process.tag': 'How We Work', 'process.title': 'Our', 'process.title.accent': 'process',
+    'process.desc': 'From technical specification to delivery, every step is rigorously controlled to ensure parts that exceed customer expectations.',
+    'process.s1.title': 'Technical Analysis', 'process.s1.desc': 'We receive the technical drawing or 3D model and review all specifications, tolerances, and required materials.',
+    'process.s2.title': 'CNC Programming', 'process.s2.desc': 'Expert programmers develop optimized CNC code for maximum precision and efficiency using CAM software.',
+    'process.s3.title': 'CNC Machining', 'process.s3.desc': 'Production in our machine park with real-time monitoring via MES Syneco for maximum operational efficiency.',
+    'process.s4.title': 'Quality Control', 'process.s4.desc': '100% dimensional inspection in our metrology laboratory with CMM and calibrated instruments. No part leaves without approval.',
+    'process.s5.title': 'Shipping', 'process.s5.desc': 'Appropriate packaging and complete technical documentation, with full lot traceability. Delivery on schedule.',
+
+    'seg.tag': 'Industry Sectors', 'seg.title': 'Segments we', 'seg.title.accent': 'serve',
+    'seg.desc': 'Our expertise spans the most demanding industrial sectors, with customized solutions for each application.',
+
+    'cap.tag': 'Machine Park', 'cap.title': 'Cutting-edge', 'cap.title.accent': 'technology',
+    'cap.desc': 'We continuously invest in state-of-the-art equipment to ensure productivity, precision, and competitiveness.',
+
+    'clients.tag': 'Our Clients', 'clients.title': 'Trusted by major', 'clients.title.accent': 'brands',
+    'clients.desc': 'We are trusted partners of the largest companies in the national industry, delivering quality that makes a difference.',
+
+    'contact.tag': 'Get in Touch', 'contact.title': 'Let\'s work', 'contact.title.accent': 'together',
+    'contact.desc': 'Contact us and request a personalized quote for your needs.',
+    'contact.address.title': 'Address', 'contact.address.value': 'Av. São Borja, 3001<br>Fazenda São Borja<br>São Leopoldo/RS', 'contact.address.hint': 'View on Google Maps →',
+
+    'cert.title': 'ISO Certified Company', 'cert.download': 'Download ISO Certificate (PDF)',
+    'cert.desc': 'APO operates with a certified quality management system, ensuring standardized processes, lot traceability, systematic dimensional control, and continuous improvement in all aspects of production. Our certification is regularly audited and reflects the commitment of leadership and the entire team to excellence.',
+  }
+};
+
+const typedWords = {
+  pt: ['Precisão', 'Excelência', 'Qualidade', 'Confiança', 'Inovação'],
+  en: ['Precision', 'Excellence', 'Quality', 'Trust', 'Innovation'],
+};
+
+let currentLang = localStorage.getItem('lang') || 'pt';
+
+function applyLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (i18n[lang] && i18n[lang][key] !== undefined) {
+      el.innerHTML = i18n[lang][key];
+    }
+  });
+
+  const toggle = document.getElementById('langToggle');
+  if (toggle) {
+    toggle.textContent = lang === 'pt' ? 'PT | EN' : 'EN | PT';
+    toggle.classList.toggle('en-active', lang === 'en');
+  }
+}
+
+const langToggle = document.getElementById('langToggle');
+if (langToggle) {
+  langToggle.addEventListener('click', () => {
+    applyLanguage(currentLang === 'pt' ? 'en' : 'pt');
+  });
+}
+
+applyLanguage(currentLang);
