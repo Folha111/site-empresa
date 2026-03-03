@@ -1062,17 +1062,24 @@ img { max-width: 100%; display: block; }
 }
 
 .client-logo {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  font-weight: 900;
-  letter-spacing: 4px;
-  padding: 32px 64px;
-  color: rgba(143,163,184,0.5);
+  padding: 24px 56px;
   border-right: 1px solid var(--border);
-  transition: color 0.3s ease;
-  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
-.client-logo:hover { color: var(--accent); }
+.client-logo img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.6;
+  filter: grayscale(1) invert(1);
+  transition: opacity 0.3s;
+}
+.client-logo:hover img {
+  opacity: 1;
+}
 
 /* Testimonials */
 .testimonial-grid {
